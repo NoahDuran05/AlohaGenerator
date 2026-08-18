@@ -1,0 +1,12 @@
+[project]
+name = "aloha_blog"
+version = "0.1.0"
+description = "Blogging"
+authors = [{name = "Aloha Agentics", email = "poorna@alohaagentics.org"}]
+dependencies = [
+    "pydantic", "typing", "requests"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

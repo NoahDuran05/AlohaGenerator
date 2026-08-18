@@ -1,0 +1,20 @@
+[project]
+name = "aloha_email"
+version = "1.1.0"
+description = "Email utilities"
+authors = [{name = "Travis Shook", email = "travis@alohaagentics.org"}]
+dependencies = [
+    "sendgrid",
+    "azure-storage-blob",
+    "email-validator",
+    # cryptography>=47 dropped prebuilt wheels for Intel macOS (x86_64),
+    # forcing a from-source Rust/OpenSSL build that fails without pkg-config/OpenSSL installed.
+    "cryptography<47"
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
